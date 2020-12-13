@@ -1,0 +1,53 @@
+[
+  {
+    "name": "mennica",
+    "price": 10000,
+    "revenue": 3000,
+    "interval": 10000,
+    "required": [
+      "tartak",
+      "kamieniołom",
+      "dōm siōngŏrza"
+    ],
+    "amount": 0
+  },
+  {
+    "name": "gruba złotŏ",
+    "price": 5000,
+    "revenue": 100,
+    "interval": 1000,
+    "required": [
+      "tartak",
+      "kamieniołom",
+      "dōm siōngŏrza"
+    ],
+    "amount": 0
+  },
+  {
+    "name": "tartak",
+    "price": 3000,
+    "revenue": 500,
+    "interval": 5000,
+    "required": [
+      "kamieniołom",
+      "dōm siōngŏrza"
+    ],
+    "amount": 0
+  },
+  {
+    "name": "kamieniołom",
+    "price": 500,
+    "revenue": 200,
+    "interval": 10000,
+    "required": [],
+    "amount": 0
+  },
+  {
+    "name": "dōm siōngŏrza",
+    "price": 1500,
+    "revenue": 300,
+    "interval": 3000,
+    "required": [],
+    "amount": 0
+  }
+]
