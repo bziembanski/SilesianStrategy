@@ -22,21 +22,32 @@ open class BuildingSeller(
     }
 
     open fun checkRequired() {
-        var check = 0;
+        var check = 0
         val building = buildingsContainer.getBuilding(buildingName)
         if (nameCheck) {
             building.required.forEach {
                 if (buildingsContainer.getBuilding(it).amount > 0)
                     check++
             }
+            requiredCheck = check == building.required.size
+            if(!requiredCheck){
+                print("Do wybudowaniŏ tego budōnku potrzebujesz: ")
+                building.required.forEach {
+                    print("[%s]".format(it))
+                }
+                println()
+            }
         }
-        requiredCheck = check == building.required.size
     }
 
     open fun checkMoney() {
+        val building = buildingsContainer.getBuilding(buildingName)
         if (requiredCheck) {
-            val price = buildingsContainer.getBuilding(buildingName).price
+            val price = building.price
             moneyCheck = (price * amount) <= money
+            if (!moneyCheck){
+                println("Do wybudowaniŏ tego budōnkōw potrzebujesz %d kōnsztōw złotŏ".format(building.price))
+            }
         }
     }
 

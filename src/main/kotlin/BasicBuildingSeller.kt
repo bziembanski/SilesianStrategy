@@ -6,7 +6,6 @@ class BasicBuildingSeller
     money: Int
 ) : BuildingSeller(buildingName, amount, buildingsContainer, money) {
 
-
     override fun checkRequired() {
         requiredCheck = true
     }

@@ -11,12 +11,18 @@ class BuildingsContainer(initFile: String = "buildings.json") {
         }
     }
 
-    fun setBuildings(array: Array<Building>) {
-        buildings = array.map { it.copy() } as ArrayList<Building>
+    fun setBuildings(array: ArrayList<Building>) {
+        array.forEachIndexed { index, building ->
+            buildings[index].amount = building.amount
+        }
     }
 
     fun getBuildings(): ArrayList<Building> {
         return buildings
+    }
+
+    fun getBuildingsCopy(): ArrayList<Building>{
+        return buildings.map { it.copy() } as ArrayList<Building>
     }
 
     fun getBuilding(name: String): Building {
